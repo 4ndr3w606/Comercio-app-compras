@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 @Injectable({ providedIn: 'root' })
 export class ApiService {
 private http = inject(HttpClient);
-private apiUrl = 'https://api.ejemplo.com/v1/items';
+private apiUrl = 'https://jsonplaceholder.typicode.com/posts';
 getItems(): Observable<any[]> {
 return this.http.get<any[]>(this.apiUrl);
 }
